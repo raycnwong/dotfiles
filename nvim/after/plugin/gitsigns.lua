@@ -23,5 +23,7 @@ gitsigns.setup {
       vim.schedule(function() gs.prev_hunk() end)
       return '<Ignore>'
     end, { expr = true })
+
+    map('n', '<Space>c', gs.preview_hunk_inline)
   end
 }

@@ -31,6 +31,8 @@ null_ls.setup {
         end,
       })
     end
+
+    vim.api.nvim_create_user_command('FixEslint', '!eslint_d % --fix', { nargs = 0 })
   end
 }
 

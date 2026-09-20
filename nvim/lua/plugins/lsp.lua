@@ -39,6 +39,9 @@ return {
       servers = {
         tsserver = {},
         svelte = {},
+        astro = {},
+        golangci_lint_ls = {},
+        gopls = {},
         lua_ls = {
           settings = {
             Lua = {

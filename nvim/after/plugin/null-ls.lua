@@ -14,11 +14,16 @@ end
 
 null_ls.setup {
   sources = {
-    null_ls.builtins.formatting.eslint_d,
-    null_ls.builtins.diagnostics.eslint_d.with({
-      diagnostics_format = '[eslint] #{m}\n(#{c})'
+    null_ls.builtins.formatting.eslint_d.with({
+      extra_filetypes = { "svelte" },
     }),
-    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.diagnostics.eslint_d.with({
+      diagnostics_format = '[eslint] #{m}\n(#{c})',
+      extra_filetypes = { "svelte" },
+    }),
+    null_ls.builtins.formatting.prettierd.with({
+      extra_filetypes = { "svelte" },
+    }),
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
@@ -32,7 +37,7 @@ null_ls.setup {
       })
     end
 
-    vim.api.nvim_create_user_command('FixEslint', '!eslint_d % --fix', { nargs = 0 })
+    vim.api.nvim_create_user_command('FixEslint', '!eslint_d "%" --fix', { nargs = 0 })
   end
 }
 

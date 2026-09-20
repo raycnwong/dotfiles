@@ -49,6 +49,11 @@ nvim_lsp.tsserver.setup {
   capabilities = capabilities
 }
 
+nvim_lsp.svelte.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
 nvim_lsp.lua_ls.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)

@@ -13,6 +13,8 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 
+vim.g.mapleader = " "
+
 require 'colorscheme'
 require 'remap'
 require 'plugins'

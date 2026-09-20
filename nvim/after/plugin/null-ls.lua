@@ -33,3 +33,19 @@ null_ls.setup {
     end
   end
 }
+
+vim.api.nvim_create_user_command(
+  'TogglePrettierFormatting',
+  function()
+    null_ls.toggle('prettierd')
+  end,
+  { nargs = 0 }
+)
+
+vim.api.nvim_create_user_command(
+  'ToggleEslintFormatting',
+  function()
+    null_ls.toggle('prettierd')
+  end,
+  { nargs = 0 }
+)

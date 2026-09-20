@@ -1,2 +1,2 @@
-vim.keymap.set('v', '∆', ":m '>+1<CR>gv=gv") -- alt + k
-vim.keymap.set('v', '˚', ":m '<-2<CR>gv=gv") -- alt + j
+vim.keymap.set('v', 'K', ":m '>+1<CR>gv=gv") -- shift + k
+vim.keymap.set('v', 'J', ":m '<-2<CR>gv=gv") -- shift + j

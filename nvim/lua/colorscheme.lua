@@ -10,6 +10,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.cmd([[hi DiffChange guifg=NONE ctermfg=NONE guibg=#335261 ctermbg=239 gui=NONE cterm=NONE]])
     vim.cmd([[hi DiffDelete guifg=#f43753 ctermfg=203 guibg=#79313c ctermbg=237 gui=NONE cterm=NONE]])
     vim.cmd([[hi DiffText guifg=NONE ctermfg=NONE guibg=NONE ctermbg=NONE gui=reverse cterm=reverse]])
+    vim.cmd([[hi @exception guifg=#67b0e8]])
   end,
 })
 

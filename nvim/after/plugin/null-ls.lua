@@ -43,9 +43,9 @@ vim.api.nvim_create_user_command(
 )
 
 vim.api.nvim_create_user_command(
-  'ToggleEslintFormatting',
+  'ToggleEslintChecking',
   function()
-    null_ls.toggle('prettierd')
+    null_ls.toggle('eslint_d')
   end,
   { nargs = 0 }
 )

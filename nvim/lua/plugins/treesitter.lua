@@ -1,7 +1,19 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = {
-    ensure_installed = { "markdown", "markdown_inline", "javascript", "typescript", "lua", "svelte", "css" },
+    ensure_installed = {
+      "markdown",
+      "markdown_inline",
+      "javascript",
+      "typescript",
+      "lua",
+      "svelte",
+      "css",
+      "go",
+      "gomod",
+      "gowork",
+      "gosum",
+    },
     sync_install = false,
     auto_install = true,
 

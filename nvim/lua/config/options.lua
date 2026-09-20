@@ -14,3 +14,4 @@ vim.opt.autoindent = true
 vim.opt.backspace = { "start", "eol", "indent" }
 
 vim.g.mapleader = " "
+vim.g.lazyvim_prettier_needs_config = true

@@ -1,16 +1,22 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
+    version = "^1.0.0",
     keys = function()
       return {}
     end,
   },
 
   {
+    "mason-org/mason-lspconfig.nvim",
+    version = "^1.0.0",
+  },
+
+  {
     "neovim/nvim-lspconfig",
     dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
     },
     init = function()
       require("lazyvim.plugins.lsp.keymaps").get = function()
@@ -37,11 +43,16 @@ return {
       },
       diagnostics = {},
       servers = {
-        tsserver = {},
-        svelte = {},
+        ts_ls = {},
+        svelte = {
+          capabilities = {
+            workspace = {
+              didChangeWatchedFiles = vim.fn.has("nvim-0.10") == 0 and { dynamicRegistration = true },
+            },
+          },
+        },
+        tailwindcss = {},
         astro = {},
-        golangci_lint_ls = {},
-        gopls = {},
         lua_ls = {
           settings = {
             Lua = {

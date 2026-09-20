@@ -1,6 +1,6 @@
 vim.opt.title = true
 vim.opt.number = true
-vim.cmd.colorscheme('everblush')
+vim.opt.relativenumber = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.ignorecase = true
@@ -13,5 +13,6 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.backspace = { 'start', 'eol', 'indent' }
 
+require 'colorscheme'
 require 'remap'
 require 'plugins'

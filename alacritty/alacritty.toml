@@ -1,0 +1,18 @@
+[font]
+normal = { family = "Hack Nerd Font Mono", style = "Regular" }
+bold = { family = "Hack Nerd Font Mono", style = "Bold" }
+size = 16
+offset = { x = 0, y = 5 }
+
+[mouse]
+hide_when_typing = true
+
+[window]
+decorations = "none"
+startup_mode = "Maximized"
+
+[keyboard]
+bindings = [
+  { key = "PageUp", action = "None" },
+  { key = "PageDown", action = "None" },
+]

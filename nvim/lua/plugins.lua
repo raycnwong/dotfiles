@@ -21,6 +21,11 @@ return require('packer').startup(function(use)
     as = 'everblush',
   }
 
+  use {
+    'sonph/onehalf',
+    rtp = 'vim',
+  }
+
   use 'kyazdani42/nvim-web-devicons'
 
   use {

@@ -1,7 +1,6 @@
 iterm2
 yarn
-LunarVim
 configstore
-nvim/plugin/packer_compiled.lua
+nvim.bak
 github-copilot
-nvim/pack
+lazyvim.json

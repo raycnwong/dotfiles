@@ -28,4 +28,5 @@ return {
   { "trouble.nvim", enabled = false },
   { "vim-illuminate", enabled = false },
   { "vim-startuptime", enabled = false },
+  { "telescope-fzf-native.nvim", enabled = false },
 }

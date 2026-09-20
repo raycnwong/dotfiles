@@ -27,17 +27,17 @@ local on_attach = function(client, bufnr)
   --local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
   --buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
 
-  require("lsp_signature").on_attach {
-    hint_enable = false,
-    hi_parameter = "IncSearch",
-  }
+  -- require("lsp_signature").on_attach {
+  --   hint_enable = false,
+  --   hi_parameter = "IncSearch",
+  -- }
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', '<Space>s', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
+  -- buf_set_keymap('n', '<Space>s', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
 end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()

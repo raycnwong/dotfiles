@@ -3,3 +3,5 @@ yarn
 LunarVim
 configstore
 nvim/plugin/packer_compiled.lua
+github-copilot
+nvim/pack

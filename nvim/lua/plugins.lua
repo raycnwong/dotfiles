@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
 
   use 'nvim-lua/plenary.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'ray-x/lsp_signature.nvim'
 
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
   use 'hrsh7th/cmp-nvim-lsp' -- nvim-cmp source for neovim's built-in LSP

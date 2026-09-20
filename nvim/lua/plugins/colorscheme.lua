@@ -61,6 +61,7 @@ return {
           GitSignsDeleteNr = { fg = onedark_c.red },
           TermCursor = {},
           TermCursorNC = {},
+          WinSeparator = { bg = "#141b1e", fg = "#232a2d" },
         },
         transparent_background = false,
         nvim_tree = {

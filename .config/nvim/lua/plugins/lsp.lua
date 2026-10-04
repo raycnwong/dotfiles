@@ -1,75 +1,92 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        ["*"] = {
+          keys = {
+            { "K", vim.lsp.buf.hover, desc = "Hover" },
+            { "<leader>e", vim.diagnostic.open_float, desc = "Line Diagnostics" },
+            { "gi", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
+            {
+              "gd",
+              function()
+                require("telescope.builtin").lsp_definitions({ reuse_win = true })
+              end,
+              desc = "Goto Definition",
+              has = "definition",
+            },
+            { "<leader>cC", false },
+            { "<leader>cc", false },
+            { "<leader>ca", false },
+            { "<leader>cl", false },
+            { "<leader>cr", false },
+            { "<leader>cA", false },
+            { "<leader>cR", false },
+            { "<leader>co", false },
+          },
+        },
+        vtsls = {
+          keys = {},
+        },
+        svelte = {
+          keys = {},
+        },
+        -- javascript = {
+        --   keys = {},
+        -- },
+        -- typescript = {
+        --   keys = {},
+        -- },
+        gopls = {
+          init_options = {
+            semanticTokens = true,
+          },
+          settings = {
+            gopls = {
+              gofumpt = true,
+              codelenses = {
+                gc_details = false,
+                generate = true,
+                regenerate_cgo = true,
+                run_govulncheck = true,
+                test = true,
+                tidy = true,
+                upgrade_dependency = true,
+                vendor = true,
+              },
+              hints = {
+                assignVariableTypes = true,
+                compositeLiteralFields = true,
+                compositeLiteralTypes = true,
+                constantValues = true,
+                functionTypeParameters = true,
+                parameterNames = true,
+                rangeVariableTypes = true,
+              },
+              analyses = {
+                ST1000 = false,
+                ST1021 = false,
+                nilness = true,
+                unusedparams = true,
+                unusedwrite = true,
+                useany = true,
+              },
+              usePlaceholders = true,
+              completeUnimported = true,
+              staticcheck = true,
+              directoryFilters = { "-.git", "-.vscode", "-.idea", "-.vscode-test", "-node_modules" },
+            },
+          },
+        },
+      },
+    },
+  },
+
+  {
     "mason-org/mason.nvim",
-    version = "^1.0.0",
     keys = function()
       return {}
     end,
-  },
-
-  {
-    "mason-org/mason-lspconfig.nvim",
-    version = "^1.0.0",
-  },
-
-  {
-    "neovim/nvim-lspconfig",
-    dependencies = {
-      "mason-org/mason.nvim",
-      "mason-org/mason-lspconfig.nvim",
-    },
-    init = function()
-      require("lazyvim.plugins.lsp.keymaps").get = function()
-        return {
-          { "K", vim.lsp.buf.hover, desc = "Hover" },
-          { "<leader>e", vim.diagnostic.open_float, desc = "Line Diagnostics" },
-          { "[d", vim.diagnostic.goto_prev, desc = "Goto Previous Diagnostics" },
-          { "]d", vim.diagnostic.goto_next, desc = "Goto Next Diagnostics" },
-          { "gi", "<cmd>Telescope lsp_implementations<cr>", desc = "Goto Implementation" },
-          {
-            "gd",
-            function()
-              require("telescope.builtin").lsp_definitions({ reuse_win = true })
-            end,
-            desc = "Goto Definition",
-            has = "definition",
-          },
-        }
-      end
-    end,
-    opts = {
-      inlay_hints = {
-        enabled = false,
-      },
-      diagnostics = {},
-      servers = {
-        ts_ls = {},
-        svelte = {
-          capabilities = {
-            workspace = {
-              didChangeWatchedFiles = vim.fn.has("nvim-0.10") == 0 and { dynamicRegistration = true },
-            },
-          },
-        },
-        tailwindcss = {},
-        astro = {},
-        lua_ls = {
-          settings = {
-            Lua = {
-              diagnostics = {
-                globals = { "vim" },
-              },
-              workspace = {
-                checkThirdParty = false,
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
-        },
-      },
-      setup = {},
-    },
   },
 }

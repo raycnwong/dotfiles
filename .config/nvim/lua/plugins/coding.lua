@@ -12,8 +12,4 @@ return {
       return {}
     end,
   },
-
-  {
-    "github/copilot.vim",
-  },
 }

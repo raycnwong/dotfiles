@@ -3,3 +3,4 @@ node = { version = "lts" }
 pnpm = { version = "12" }
 bun = { version = "latest" }
 go = { version = "latest" }
+herdr = "latest"

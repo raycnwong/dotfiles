@@ -1,0 +1,32 @@
+onboarding = false
+
+[ui]
+prompt_new_workspace_name = true
+prompt_new_tab_name = false
+pane_scrollbars = false
+sidebar_collapsed_mode = "hidden"
+tab_bar_position = "bottom"
+
+[keys]
+prefix = "ctrl+a"
+settings = "prefix+,"
+split_vertical = "prefix+%"
+split_horizontal = 'prefix+"'
+new_tab = "prefix+c"
+goto = "prefix+s"
+detach = "prefix+d"
+
+[theme]
+name = "terminal"
+auto_switch = false
+
+[theme.custom]
+accent = "#8ccf7e"
+panel_bg = "#181a1f"
+sidebar_bg = "#181a1f"
+active_row_bg = "#1c3448"
+surface0 = "#181a1f"
+surface1 = "#181a1f"
+surface_dim = "#282c34"
+text = "#dadada"
+subtext0 = "#dadada"
